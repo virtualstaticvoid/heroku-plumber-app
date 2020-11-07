@@ -1,0 +1,22 @@
+{
+  "name": "heroku-plumber-app",
+  "stack": "heroku-18",
+  "description": "This is an example Plumber application, which uses heroku-buildpack-r for Heroku.",
+  "keywords": [
+    "r",
+    "plumber"
+  ],
+  "repository": "https://github.com/virtualstaticvoid/heroku-plumber-app",
+  "logo": "https://github.com/virtualstaticvoid/heroku-plumber-app/raw/master/logo.png",
+  "success_url": "/plot",
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/virtualstaticvoid/heroku-buildpack-r.git"
+    }
+  ]
+}
