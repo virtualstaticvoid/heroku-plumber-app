@@ -25,6 +25,14 @@ git push heroku master
 heroku open
 ```
 
+The following paths are provided:
+
+* [`/echo?msg=MSG`](plumber.R#L14)
+* [`/plot`](plumber.R#L21)
+* [`/sum?x=X&y=Y`](plumber.R#L30)
+
+The OpenAPI (Swagger) user-interface is available via the [`/__docs__/`](app.R#L10) path.
+
 ## License
 
 MIT License. Copyright (c) 2020 Chris Stefano. See [LICENSE](LICENSE) for details.
