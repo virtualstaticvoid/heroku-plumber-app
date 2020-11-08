@@ -1,5 +1,14 @@
 # plumber.R
 
+#* @preempt __first__
+#* @get /
+function(req, res) {
+  res$status <- 302
+  res$setHeader("Location", "./__docs__/")
+  res$body <- "Redirecting..."
+  res
+}
+
 #* Echo back the input
 #* @param msg The message to echo
 #* @get /echo
