@@ -1,10 +1,17 @@
 # Example Plumber App on Heroku
 
-This is an example [Plumber][1] application, which uses [heroku-buildpack-r][2] for Heroku.
+This is an example [Plumber][plumber] application, which uses [heroku-buildpack-r][buildpack] for Heroku.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+> Plumber allows you to create a web API by merely decorating your existing R source code
+> with roxygen2-like comments.
 
-You can use this project as a template for creating Plumber applications on Heroku. Execute these commands to get started:
+## Usage
+
+[![Deploy][button]][deployapp]
+
+You can use this project as a template for creating Plumber applications on Heroku.
+
+Execute these commands to get started:
 
 ```bash
 # get the sources
@@ -13,16 +20,18 @@ cd heroku-plumber-app
 
 # optionally, reinitialize git
 rm -rf .git
-git init
+git init -b main
 git add --all
 git commit -m "initial"
 
 # create a new heroku application, set the buildpack and deploy
-heroku create --stack=heroku-18 --buildpack https://github.com/virtualstaticvoid/heroku-buildpack-r.git
-git push heroku master
+heroku create --stack=heroku-20 --buildpack vsv/heroku-buildpack-r
+
+# deploy
+git push heroku main
 
 # view the application
-heroku open
+heroku open /__docs__/
 ```
 
 The following paths are provided:
@@ -37,5 +46,8 @@ The OpenAPI (Swagger) user-interface is available via the [`/__docs__/`](app.R#L
 
 MIT License. Copyright (c) 2020 Chris Stefano. See [LICENSE](LICENSE) for details.
 
-[1]: https://www.rplumber.io
-[2]: https://github.com/virtualstaticvoid/heroku-buildpack-r
+<!-- Links -->
+[buildpack]: https://github.com/virtualstaticvoid/heroku-buildpack-r
+[button]: https://www.herokucdn.com/deploy/button.svg
+[deployapp]: https://heroku.com/deploy?template=https://github.com/virtualstaticvoid/heroku-plumber-app/tree/main
+[plumber]: https://www.rplumber.io
