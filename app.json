@@ -1,6 +1,6 @@
 {
   "name": "heroku-plumber-app",
-  "stack": "heroku-18",
+  "stack": "heroku-20",
   "description": "This is an example Plumber application, which uses heroku-buildpack-r for Heroku.",
   "keywords": [
     "r",
@@ -16,7 +16,7 @@
   },
   "buildpacks": [
     {
-      "url": "https://github.com/virtualstaticvoid/heroku-buildpack-r.git"
+      "url": "vsv/heroku-buildpack-r"
     }
   ]
 }
